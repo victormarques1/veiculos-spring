@@ -1,0 +1,77 @@
+<div th:fragment="header">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">SystemVeiculos</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="/">Home</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="/veiculos/list">Lista de Veículos</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="/veiculos/signup">Adicionar Veículos</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+</div>
+
+<div th:fragment="footer">
+	<div class="container my-1">
+
+  <footer class="bg-info text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-2 pb-2">
+    <!-- Section: Social media -->
+    <section class="my-1">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-0" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-0" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-0" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-0" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-0" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-0" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+  
+</div>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Atualizar Veiculo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+
+<style>
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+</style>
+</head>
+
+<body>
+	<div th:replace="~{template :: header}"></div>
+
+	<div class="container my-5">
+		<h3>Atualizar Veículo</h3>
+		<div class="card">
+			<div class="card-body mb-3">
+				<div class="col-md-8">
+					<form action="#"
+						th:action="@{/veiculos/update/{id}(id=${veiculo.id})}"
+						th:object="${veiculo}" method="post">
+						<div class="row">
+							<div class="form-group col-md-8">
+								<label for="marca" class="col-form-label">Marca</label> <input
+									type="text" th:field="*{marca}" class="form-control" id="marca"
+									placeholder="Marca"> <span
+									th:if="${#fields.hasErrors('marca')}" th:errors="*{marca}"
+									class="text-danger"></span>
+							</div>
+							<div class="form-group col-md-8">
+								<label for="modelo" class="col-form-label">Modelo</label> <input
+									type="text" th:field="*{modelo}" class="form-control"
+									id="modelo" placeholder="Modelo"> <span
+									th:if="${#fields.hasErrors('modelo')}" th:errors="*{modelo}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="cor" class="col-form-label">Cor</label> <input
+									type="text" th:field="*{cor}" class="form-control" id="cor"
+									placeholder="Cor"> <span
+									th:if="${#fields.hasErrors('cor')}" th:errors="*{cor}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="valor" class="col-form-label">Valor</label> <input
+									type="text" th:field="*{valor}" class="form-control" id="valor"
+									placeholder="Valor"> <span
+									th:if="${#fields.hasErrors('valor')}" th:errors="*{valor}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="ano" class="col-form-label">Ano</label> <input
+									type="text" th:field="*{ano}" class="form-control" id="ano"
+									placeholder="ano"> <span
+									th:if="${#fields.hasErrors('ano')}" th:errors="*{ano}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="km" class="col-form-label">Km</label> <input
+									type="text" th:field="*{km}" class="form-control" id="km"
+									placeholder="km"> <span
+									th:if="${#fields.hasErrors('km')}" th:errors="*{km}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<input type="submit" class="btn btn-info"
+									value="Salvar Alterações">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div th:replace="~{template :: footer}"></div>
+
+</body>
+
+</html>
